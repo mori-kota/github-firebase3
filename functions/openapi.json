@@ -1,0 +1,62 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0",
+		"title": "Title"
+	},
+	"host": "127.0.0.1:5001",
+	"basePath": "/fir-pj777/us-central1/testFunction",
+	"schemes": [
+		"http"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/": {
+			"post": {
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/data"
+						},
+						"x-examples": {
+							"default": "\"data\": {\"firstNumber\": 24, \"secondNumber\": 4}"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200 OK"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"data": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "object",
+					"properties": {
+						"firstNumber": {
+							"type": "integer",
+							"example": "24"
+						},
+						"secondNumber": {
+							"type": "integer",
+							"example": "4"
+						}
+					}
+				}
+			}
+		}
+	}
+}
