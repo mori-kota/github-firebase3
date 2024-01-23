@@ -5,4 +5,5 @@ jobs:
       - image: cimg/openjdk:17.0-node
     steps:
       - checkout
+      - run: sudo npm install -g npm@latest
       - run: echo "helloworld"
